@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<head>
+  <title>
+    {% block page_title %}
+    Pystagram
+    {% endblock %}
+  </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+  <meta charset="utf-8">
+</head>
+
+<body>
+  
+  <h1 class="head">
+    WORD COUNT
+  </h1>
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>

@@ -1,0 +1,11 @@
+{% extends 'wordcount/layout.html' %}
+{% block content %}
+
+<div class="container">
+  <a class="block__center" href="{% url 'about' %}">ABOUT</a>
+  <form class="block__center" action="{% url 'count' %}" method="GET">
+    <textarea class="textarea" cols="40" rows="10" name="fulltext"></textarea>
+    <input class="submit block__center" type="submit" value="Count!">
+  </form>
+</div>
+{% endblock %}

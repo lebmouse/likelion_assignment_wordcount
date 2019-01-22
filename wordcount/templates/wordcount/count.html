@@ -1,0 +1,24 @@
+{% extends 'wordcount/layout.html' %}
+{% block content %}
+<div class="container">
+    <div class="block__center">
+        <h1>당신이 입력한 텍스트는 {{totalCount}} 단어로 구성되어 있습니다.</h1>
+        <br>
+        <h1>입력한 테스트: </h1>
+        <div class="box">
+            {{fulltext}}
+        </div>
+        <br>
+        <h1>단어 카운트: </h1>
+        <div class="layout box">
+            {% for word, countTotal in dictionary %}
+            <div class="word">
+                {{ word}} - {{ countTotal}}
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    <a class="block__center" href="{% url 'home' %}">다시하기</a>
+</div>
+{% endblock %}
